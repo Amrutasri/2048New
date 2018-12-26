@@ -12,6 +12,6 @@ public class Game2048 {
     }
 
     public void play() {
-        Tile tile;
+        Tile tile = grid.createTile();
     }
 }
