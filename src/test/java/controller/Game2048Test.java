@@ -17,7 +17,7 @@ class Game2048Test {
 
     @Test
     void shouldCallUpdateMethod2Times() {
-        verify(grid,times(2)).update(null, 0);
+        verify(grid,times(2)).insert(null, 0);
     }
 
     @Test

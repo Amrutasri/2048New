@@ -21,8 +21,8 @@ public class Game2048 {
         Tile tile1 = grid.createTile();
         Tile tile2 = grid.createTile();
 
-        grid.update(tile1,index1);
-        grid.update(tile2,index2);
+        grid.insert(tile1,index1);
+        grid.insert(tile2,index2);
     }
 
     public Grid play() {
