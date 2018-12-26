@@ -8,4 +8,8 @@ public class Grid {
     public boolean isEmpty() {
         return false;
     }
+
+    public void update(Tile tile, int index) {
+
+    }
 }
