@@ -9,7 +9,7 @@ public class Grid {
         return false;
     }
 
-    public void update(Tile tile, int index) {
+    public void insert(Tile tile, int index) {
 
     }
 }
