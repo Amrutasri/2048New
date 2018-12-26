@@ -7,13 +7,15 @@ import model.Tile;
 public class Game2048 {
 
     private Grid grid;
+    private NumberGenerator numberGenerator;
 
 
     Game2048(Grid grid, NumberGenerator numberGenerator) {
         this.grid = grid;
+        this.numberGenerator = numberGenerator;
     }
 
-    public void initialize(NumberGenerator numberGenerator) {
+    public void initialize() {
         int index1 = numberGenerator.generateRandomNumberBetweenRange(0,15);
         int index2 = numberGenerator.generateRandomNumberBetweenRange(0,15);
 

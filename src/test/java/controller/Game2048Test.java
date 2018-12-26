@@ -17,14 +17,14 @@ class Game2048Test {
 
     @Test
     void shouldCallInsertMethod2TimesWhenGameIsInitialized() {
-        game2048.initialize(numberGenerator);
+        game2048.initialize();
 
         verify(grid,times(2)).insert(null, 0);
     }
 
     @Test
     void shouldCreateANewTileWhenPlayMethodIsCalled() {
-        game2048.initialize(numberGenerator);
+        game2048.initialize();
         game2048.play();
 
         verify(grid, times(3)).createTile();
@@ -32,7 +32,7 @@ class Game2048Test {
 
     @Test
     void shouldReturnNonEmptyGridWhenPlayMethodIsCalled() {
-        game2048.initialize(numberGenerator);
+        game2048.initialize();
         Grid newGrid = game2048.play();
 
         assertFalse(newGrid.isEmpty());
