@@ -3,6 +3,7 @@ package controller;
 import model.Grid;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
@@ -15,5 +16,11 @@ class Game2048Test {
     void shouldCreateANewTile() {
         game2048.play();
         verify(grid).createTile();
+    }
+
+    @Test
+    void shouldReturnNonEmptyGrid() {
+        Grid newGrid = game2048.play();
+        assertFalse(newGrid.isEmpty());
     }
 }
