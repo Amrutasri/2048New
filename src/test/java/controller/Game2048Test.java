@@ -4,6 +4,7 @@ import model.Grid;
 import org.junit.jupiter.api.Test;
 
 import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
 class Game2048Test {
 
@@ -13,5 +14,6 @@ class Game2048Test {
     @Test
     void shouldCreateANewTile() {
         game2048.play();
+        verify(grid).createTile();
     }
 }

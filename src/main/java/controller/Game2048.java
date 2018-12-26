@@ -11,7 +11,8 @@ public class Game2048 {
         this.grid = grid;
     }
 
-    public void play() {
+    public Grid play() {
         Tile tile = grid.createTile();
+        return grid;
     }
 }
