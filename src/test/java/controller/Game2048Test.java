@@ -16,19 +16,23 @@ class Game2048Test {
     private Game2048 game2048 = new Game2048(grid,numberGenerator);
 
     @Test
-    void shouldCallUpdateMethod2Times() {
+    void shouldCallInsertMethod2TimesWhenGameIsInitialized() {
+        game2048.initialize(numberGenerator);
+
         verify(grid,times(2)).insert(null, 0);
     }
 
     @Test
-    void shouldCreateANewTileWhenPlayIsCalledTherebyCreateTileIsCalledThreeTimes() {
+    void shouldCreateANewTileWhenPlayMethodIsCalled() {
+        game2048.initialize(numberGenerator);
         game2048.play();
 
         verify(grid, times(3)).createTile();
     }
 
     @Test
-    void shouldReturnNonEmptyGridWhenPlayIsCalled() {
+    void shouldReturnNonEmptyGridWhenPlayMethodIsCalled() {
+        game2048.initialize(numberGenerator);
         Grid newGrid = game2048.play();
 
         assertFalse(newGrid.isEmpty());
