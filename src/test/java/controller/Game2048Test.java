@@ -8,7 +8,7 @@ import static org.mockito.Mockito.mock;
 class Game2048Test {
 
     private Grid grid = mock(Grid.class);
-    private Game2048 game2048 = new Game2048();
+    private Game2048 game2048 = new Game2048(grid);
 
     @Test
     void shouldCreateANewTile() {
