@@ -22,14 +22,14 @@ class Game2048Test {
     }
 
     @Test
-    void shouldCreateANewTile() {
+    void shouldCreateANewTileWhenPlayIsCalledTherebyCreateTileIsCalledThreeTimes() {
         game2048.play();
 
         verify(grid, times(3)).createTile();
     }
 
     @Test
-    void shouldReturnNonEmptyGrid() {
+    void shouldReturnNonEmptyGridWhenPlayIsCalled() {
         Grid newGrid = game2048.play();
 
         assertFalse(newGrid.isEmpty());
