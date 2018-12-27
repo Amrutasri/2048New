@@ -17,7 +17,13 @@ public class Grid {
     }
 
     public boolean isEmpty() {
-        return false;
+        int countTiles = 0;
+        for(int index=0; index<16; index++) {
+            if(tiles[index]!=null) {
+                countTiles++;
+            }
+        }
+        return countTiles==0;
     }
 
     public void insert(Tile tile, int index) {

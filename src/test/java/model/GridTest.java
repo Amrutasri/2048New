@@ -42,4 +42,16 @@ class GridTest {
         assertNotEquals(tiles[3],tile1);
     }
 
+    @Test
+    void shouldReturnTrueAsGridIsEmpty() {
+        assertTrue(grid.isEmpty());
+    }
+
+    @Test
+    void shouldReturnFalseAfterInsertingTile1AsGridIsNotEmpty() {
+        grid.insert(tile1,2);
+        
+        assertFalse(grid.isEmpty());
+    }
+
 }
