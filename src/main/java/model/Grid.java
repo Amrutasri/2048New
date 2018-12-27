@@ -8,6 +8,10 @@ public class Grid {
         tiles = new Tile[16];
     }
 
+    public Tile[] getTiles() {
+        return tiles;
+    }
+
     public Tile createTile() {
         return new Tile();
     }
@@ -17,6 +21,6 @@ public class Grid {
     }
 
     public void insert(Tile tile, int index) {
-
+        tiles[index] = tile;
     }
 }
