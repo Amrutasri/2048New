@@ -28,7 +28,7 @@ public class Game2048 {
         return grid;
     }
 
-    public Grid play() {
+    public Grid play(String direction) {
         Tile tile = grid.createTile();
         return grid;
     }
