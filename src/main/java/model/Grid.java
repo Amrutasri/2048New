@@ -3,7 +3,7 @@ package model;
 public class Grid {
 
     public Tile createTile() {
-        return null;
+        return new Tile();
     }
 
     public boolean isEmpty() {
