@@ -24,14 +24,14 @@ class Game2048Test {
 
     @Test
     void shouldCreateANewTileWhenPlayMethodIsCalled() {
-        game2048.play("right");
+        game2048.play(Direction.RIGHT);
 
         verify(grid, times(1)).createTile();
     }
 
     @Test
     void shouldReturnNonEmptyGridWhenPlayMethodIsCalled() {
-        Grid newGrid = game2048.play("right");
+        Grid newGrid = game2048.play(Direction.RIGHT);
 
         assertFalse(newGrid.isEmpty());
     }
@@ -39,7 +39,7 @@ class Game2048Test {
     @Test
     void shouldMoveTilesInGridToRight() {
         game2048.initialize();
-        game2048.play("right");
+        game2048.play(Direction.RIGHT);
 
     }
 
