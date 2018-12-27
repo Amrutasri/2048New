@@ -2,6 +2,12 @@ package model;
 
 public class Grid {
 
+    private Tile[] tiles;
+
+    Grid() {
+        tiles = new Tile[16];
+    }
+
     public Tile createTile() {
         return new Tile();
     }

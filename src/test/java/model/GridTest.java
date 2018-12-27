@@ -15,4 +15,11 @@ class GridTest {
         assertEquals(tile.getClass(), Tile.class);
     }
 
+    @Test
+    void shouldNotReturnAnyOtherThanTileClassWhenCreateTileIsCalled() {
+        Tile tile = grid.createTile();
+
+        assertNotEquals(tile.getClass(),Grid.class);
+    }
+
 }
