@@ -15,7 +15,7 @@ public class Game2048 {
         this.numberGenerator = numberGenerator;
     }
 
-    public void initialize() {
+    public Grid initialize() {
         int index1 = numberGenerator.generateRandomNumberBetweenRange(0,15);
         int index2 = numberGenerator.generateRandomNumberBetweenRange(0,15);
 
@@ -24,6 +24,8 @@ public class Game2048 {
 
         grid.insert(tile1,index1);
         grid.insert(tile2,index2);
+
+        return grid;
     }
 
     public Grid play() {
