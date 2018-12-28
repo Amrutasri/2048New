@@ -30,8 +30,9 @@ public class Game2048 {
 
     public Grid play(Direction direction) {
 
+        direction.move(grid);
 
-        Tile tile = grid.createTile();
+        Tile tile = new Tile();
         return grid;
     }
 }
