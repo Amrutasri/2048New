@@ -11,20 +11,6 @@ class GridTest {
     private Tile tile1 = mock(Tile.class);
 
     @Test
-    void shouldReturnTileOnlyWhenCreateTileIsCalled() {
-        Tile tile = grid.createTile();
-
-        assertEquals(tile.getClass(), Tile.class);
-    }
-
-    @Test
-    void shouldNotReturnAnyOtherThanTileClassWhenCreateTileIsCalled() {
-        Tile tile = grid.createTile();
-
-        assertNotEquals(tile.getClass(),Grid.class);
-    }
-
-    @Test
     void shouldInsertTile1ToSpecifiedIndex2() {
         grid.insert(tile1,2);
 

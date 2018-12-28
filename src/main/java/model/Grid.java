@@ -12,10 +12,6 @@ public class Grid {
         return tiles;
     }
 
-    public Tile createTile() {
-        return new Tile();
-    }
-
     public boolean isEmpty() {
         int countTiles = 0;
         for(int index=0; index<16; index++) {
